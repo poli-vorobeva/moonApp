@@ -8,7 +8,7 @@ export default class TaskInput extends Control {
 	private taskItemInput: Control<HTMLInputElement>;
 	constructor(parent: HTMLElement) {
 		super(parent, 'form');
-		const categories = ['study', 'chores', 'reading', 'sport', 'hobby', 'learning']
+		const categories = ['study', 'chores', 'sport'/*,'reading',  'hobby', 'learning'*/]
 		this.taskItemInput = new Control(this.node, 'input', 'mainTaskInput')
 		const button = new Control(this.node, 'button', taskInputStyles['red'], 'Add')
 		button.node.onclick = (e) => {

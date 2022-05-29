@@ -9,19 +9,24 @@ export default class TasksList extends Control {
 		super(parent);
 		this.tasksListData = [
 			{name: 'one', category: 'study'},
-			{name: 'one', category: 'study'},
-			{name: 'one', category: 'study'}]
+			{name: 'two', category: 'study'},
+			{name: 'three', category: 'study'}]
 		this.tasksList = new Control(this.node, 'ul', 'mainTasksList')
 		this.tasksListData.forEach(task => {
 			this.createTaskLi(task.name)
 		})
 	}
 
-	addTaskToList(taskData: { name: string; category: string }) {
+	public getAllTasks() {
+		return this.tasksListData
+	}
+
+	public addTaskToList(taskData: { name: string; category: string }) {
 		this.tasksListData.push(taskData)
 		this.createTaskLi(taskData.name)
 	}
-	createTaskLi(name:string){
+
+	private createTaskLi(name: string) {
 		new Control(this.tasksList.node, 'li', '', name)
 	}
 }

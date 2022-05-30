@@ -2,6 +2,7 @@ import Control from "./common/Control";
 import MainPage from "./MainPage/ManiPage";
 import SubDivideTasks from "./SubDevideTasks/SubDivideTasks";
 import RepeatTasks from "./RepeatTasks/RepeatTasks";
+import ByWeeksScreen from "./ByWeeksScreen/ByWeeksScreen";
 
 export type taskItem =
 	{ name: string, category: string }
@@ -18,6 +19,10 @@ export default class App extends Control {
 			subDivideTasks.onSubDivideForm=(data)=>{
 				subDivideTasks.destroy()
 				const repeatTasks=new RepeatTasks(this.node,data)
+				repeatTasks.onByDaysScreen=(data)=>{
+					repeatTasks.destroy()
+					const byWeeksScreen = new ByWeeksScreen(this.node,data)
+				}
 			}
 		}
 

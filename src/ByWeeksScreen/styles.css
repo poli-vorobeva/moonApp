@@ -8,18 +8,4 @@
     justify-content: space-between;
     background: antiquewhite;
 }
-.byWeekTasks{
-    display: flex;
-    flex-flow: column nowrap;
-}
-.byWeekTask{
-    border-bottom: 2px solid burlywood;
 
-}
-.byWeekDays{
-    width: 40%;
-}
-.byWeekDay{
-    width: 100%;
-    background: aquamarine;
-}

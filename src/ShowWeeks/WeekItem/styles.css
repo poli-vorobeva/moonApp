@@ -1,0 +1,23 @@
+.weekContainer{
+    width: 200px;
+    height: 350px;
+    background: green;
+}
+.weekItemDay{
+    border-bottom: 2px solid;
+    height: 30px;
+}
+.weekItemDay:first-child{
+    display: inline-block;
+    width: 10%;
+    border-right: 2px;
+}
+.spanTasks{
+    width: 80%;
+    height: 100%;
+    margin-left: 10px;
+    display: inline-flex;
+    flex-flow: column wrap;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}

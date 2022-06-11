@@ -5,7 +5,7 @@ import byTaskStyles from './styles.css'
 
 export default class TasksByWeek extends Control{
 	tasksElements: Record<string, Control<HTMLElement>[]>
-	private tasksData: any;
+	private tasksData: tByWeeksTaskData[];
 	onSetDragFromTasks:(bool:boolean)=>void
 	constructor(parentNode:HTMLElement,data: tByWeeksTaskData[]) {
 		super(parentNode);
@@ -31,5 +31,9 @@ export default class TasksByWeek extends Control{
 	deleteTaskElement(el: string) {
 		this.tasksElements[el][this.tasksElements[el].length - 1].destroy()
 		this.tasksElements[el].pop()
+	}
+
+	isEmptyTasks() {
+		return this.tasksData.length>0
 	}
 }
